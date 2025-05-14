@@ -1,11 +1,8 @@
 /* index.css */
 /* 1행================================== 랜딩 후원안내 */
-#wrap {
-    
-}
+#wrap {} /* 기본값을 쓰기위해 기입x width:100% 높이는 내용만큼 */
 #wrap .intro {
     height:100vh;
-    width:1920px;
     background:url(../images/bg1.png) center / cover;  
     position:relative;
     padding:100px 335px; /* 형제-형제 margin 부모-자식 padding */
@@ -27,10 +24,6 @@
     text-align: center; /* 자식,자손이 인라인일경우 수평정렬 text-align */
     /* 자식이 float 적용으로 인해 부모바깥으로 나가는 문제해결 */
     overflow: hidden;
-
-
-    
-    
 }
 #wrap .intro .container h1:nth-child(1) {
     text-align: left;
@@ -71,10 +64,68 @@
     color:#fff;
     border-radius: 30px;
     font-size: 1.625rem;
-    
-
 }
 /* 2행================================== 퀴즈 */
+#wrap .quiz{
+    background:url(../images/quiz_bg.png) center / cover ;
+    padding:150px 0;
+}
+#wrap .quiz .container{
+    width:1250px; border:5px solid pink;
+    margin:0 auto;
+    display: grid; /* 왼쪽퀴즈와 오른쪽참여현황 정렬 grid */
+    grid-template-columns: 1fr 1fr;
+}
+#wrap .quiz .container #left_quiz{}
+#wrap .quiz .container #left_quiz *{color:#fff;}
+#wrap .quiz .container #left_quiz h2{
+    text-align: center;
+    margin-bottom:38px;
+    font-size:3.438rem;
+    font-weight:500;
+
+}
+#wrap .quiz .container #left_quiz h3{
+    
+    font-size:1.25rem;
+    line-height: 1.7;
+    
+}
+#wrap .quiz .container #left_quiz .list{
+    display: grid;
+    grid-template-rows:34px 34px 34px 34px; /* repeat(4, 34px) */
+    margin:8px 0 38px;
+}
+#wrap .quiz .container #left_quiz .list label{
+    
+
+    
+}
+#wrap .quiz .container #left_quiz .list label input[name="quiz"]{display:none;}
+#wrap .quiz .container #left_quiz .list label input[name="quiz"]:checked + span {
+    background-image:url(../images/check_on.png) ;
+}
+#wrap .quiz .container #left_quiz .list label span{
+    background-image:url(../images/check_off.png) ;
+    background-repeat: no-repeat;
+    background-position-y: 5px;
+    line-height:34px;
+    display:block;
+    padding-left:48px;
+    
+}
+#wrap .quiz .container #left_quiz #answer_btn{
+    background-color: #050505;
+    width: 100%;
+    height:54px; 
+    border-radius: 50px;
+    
+}
+#wrap .quiz .container .right{text-align: right;}
+#wrap .quiz .container .right p{}
+#wrap .quiz .container .right p:nth-child(1){}
+#wrap .quiz .container .right p:nth-child(1) img{}
+#wrap .quiz .container .right p:nth-child(2) {color:#fff;}
 /* 3행================================== 새끼북극곰 이야기 */
 /* 4행================================== 빙하면적감소 */
 /* 5행================================== 인류재앙 */
