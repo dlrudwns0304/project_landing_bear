@@ -168,6 +168,96 @@ body * {transition:all 0.5s;}
 
 /* 4행================================== 빙하면적감소 */
 /* 5행================================== 인류재앙 */
+#wrap .disater{
+    background-color: #F5F5F5;
+    padding:200px 0;
+    
+
+}
+#wrap .disater .container{
+    max-width:1250px;
+    min-width:320px;
+    /* 최소 320 ~ 최대 1250 사이 너비값은 가변형 세팅 */
+    /* (위) 큰 범위값 세팅 후 @media 규칙 내에서 테블릿, 모바일에 맞는 레이아웃 재수정하며 반응형 제작 */
+    margin:0 auto;
+    border: 3px solid red;
+    text-align: center;
+}
+#wrap .disater .container h2{
+    font-size: 3.438rem;
+    line-height: 1.2;
+    letter-spacing: -0.01rem;
+    margin-bottom:55px;
+    font-weight: 500;
+    
+}
+#wrap .disater .container > p{
+    font-size:1.25rem;
+    line-height: 1.7;
+    letter-spacing: 0;
+    margin-bottom: 55px;
+}
+#wrap .disater .container .list{
+    display: flex;
+    /* 정렬하려는 대상이 li 의 부모한테 flex를 준다 */
+    /* flex 의 기본값 자식요소들을 옆으로 정렬(기본값) */
+    gap:20px;
+}
+#wrap .disater .container .list li{
+    background-color: #fff;
+    flex:1;
+
+}
+#wrap .disater .container .list li .bg{
+    height:320px;
+    background-position:0 60% ;
+    background-size: cover;
+    position: relative;
+}
+#wrap .disater .container .list li .bg::before{
+    content:''; display: block;
+    position: absolute; left:0; top:0; width:100%; height:100%;
+    /* 위 content~height속성 까지 before 또는 after 가상요소 사용 시 필수속성 모음 */
+    background: linear-gradient(#000 19% ,transparent 55% );
+    z-index: 50;
+}
+#wrap .disater .container .list li .bg h3{
+    color:#fff; position: relative; z-index: 60;
+    /* z-index 속성은 position속성이 선행되어야만 사용할 수 있는 중첩순서이다 */
+    font-size:2.688rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    padding:48px 132px 11px;
+    width:max-content;
+}
+#wrap .disater .container .list li .bg p{
+    color:#fff; position: relative; z-index:60;
+    font-size: 1.25rem;
+    line-height: 1.7;
+}
+#wrap .disater .container .list li > p{
+    height:250px;
+    padding:20px;
+    line-height: 1.7;
+    margin:20px;
+    height:max-content;
+    font-size: 1.25rem;
+    
+}
+/* 5행 개별 배경 선택자 */
+#wrap .disater .container .list li:nth-child(1) .bg {
+    background-image:url(../images/28.png);
+
+}
+#wrap .disater .container .list li:nth-child(2) .bg {
+    background-image:url(../images/27.png);
+
+}
+#wrap .disater .container .list li:nth-child(3) .bg {
+    background-image:url(../images/wwf.jpg);
+
+}
 /* 6행================================== 지구위기 */
 /* 7행================================== wwf 단체홍보 */
 /* 8행================================== 다양한활동 */
